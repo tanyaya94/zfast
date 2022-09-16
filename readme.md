@@ -82,11 +82,10 @@ zfast offers easy E2E encryption for user data via [lit protocol](https://litpro
 ### Using Encryption with zfast Client
 
 ```javascript
-const ripServerUrl = 'https://zfast-sandbox.onrender.com';
 
 // Enable encryption during client initialization
 // zfast will automatically use lit-js-sdk for encryption
-const zfast = new RipClient({ ripServerUrl, enableEncryption: true });
+const zfast = new RipClient({ zfastServerUrl, enableEncryption: true });
 
 ...
 
@@ -149,4 +148,4 @@ Under your environment variables you will need to set IPFS
 
 #### Point Your zfast Client to the Server
 
-Once your server is live, you can point your zfast client to the server by initializing it with `ripServerUrl` which points to your server instance URL.
+Once your server is live, you can point your zfast client to the server by initializing it with `zfastServerUrl` which points to your server instance URL.
