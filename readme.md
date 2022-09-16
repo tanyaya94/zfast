@@ -1,20 +1,16 @@
 <p align="center">
   <b>
-    🪦 ZFast 🪦
+    ZFast
   </b>
   <br/>
-  A snappy, decentralized JSON store perfect for fast-moving web3 builders. <br/> <a href="https;">Redis</a> + <a href="https://ipfs.io/" target="_blank">IPFS</a> = zfast = 😍
+  A quick, decentralized JSON store perfect for fast-moving web3 builders. <br/> <a href="https;">Redis</a> + <a href="https://ipfs.io/" target="_blank">IPFS</a> = zfast = 😍
 </p>
 
 # Install
 
-### With a Package Manager (browser or node.js)
-
-```sh
-npm install --save @zfast/client
-
-# or with yarn
-yarn add @zfast/client
+```
+git clone https://github.com/tanyaya94/zfast
+npm run build
 ```
 
 # Quick Start
@@ -114,12 +110,6 @@ const { data } = await zfast.get('myJsonKey');
 
 For now, if you want to use zfast in production, you will need to run your own zfast server instance.
 
-**⚠️⚠️ !! We can help you get a server instance up and running !! ⚠️⚠️**
-
-If you would like help from the team behind zfast getting a production instance up and running, please join our [discord](https://discord.gg/5HQ5V7d5jh)
-
-[![discord](https://i.imgur.com/d1eTfYR.png)](https://discord.gg/5HQ5V7d5jh)
-
 ### Instructions for hosting zfast Server
 
 If you want to run a zfast instance on your own follow the below instructions
@@ -160,9 +150,3 @@ Under your environment variables you will need to set IPFS
 #### Point Your zfast Client to the Server
 
 Once your server is live, you can point your zfast client to the server by initializing it with `ripServerUrl` which points to your server instance URL.
-
-# Contributing
-
-If you have any interest in contributing to zfast, please join our [discord](https://discord.gg/5HQ5V7d5jh) and we can help you get started with a starter task. Also feel free to contact me at [zac@juicelabs.io](mailto:zac@juicelabs.io)
-
-[![discord](https://i.imgur.com/d1eTfYR.png)](https://discord.gg/5HQ5V7d5jh)
