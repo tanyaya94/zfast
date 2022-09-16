@@ -1,0 +1,12 @@
+node_modules
+.env
+index.js
+*.log
+
+dist
+
+.DS_Store
+
+yarn.error
+
+yarn-error.log

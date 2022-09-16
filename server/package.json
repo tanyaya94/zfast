@@ -1,0 +1,35 @@
+{
+  "name": "@zfast/server-example",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Server implementation to run zfast",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node index.ts"
+  },
+  "author": "zac@juicelabs.io",
+  "license": "MIT",
+  "dependencies": {
+    "@zfast/server": "^1.0.3",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "nft.storage": "^7.0.0",
+    "node-fetch": "^3.2.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zdenham/redis-ipfs.git"
+  },
+  "keywords": [
+    "redis",
+    "ipfs"
+  ],
+  "bugs": {
+    "url": "https://github.com/zdenham/redis-ipfs/issues"
+  },
+  "homepage": "https://github.com/zdenham/redis-ipfs#readme",
+  "devDependencies": {
+    "ts-node": "^10.9.1"
+  }
+}
