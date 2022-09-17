@@ -35,10 +35,6 @@ await ZFast.purge('myJsonKey');
 
 ```
 
-## Demo
-
-See the speed for yourself on the zfast [demo site](https://zdenham.github.io/redis-ipfs).
-
 # Motivation
 
 The SQL database is a powerful tool unrivalled for storing and querying relational data.
