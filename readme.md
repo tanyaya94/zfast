@@ -35,27 +35,6 @@ await ZFast.purge('myJsonKey');
 
 ```
 
-# Motivation
-
-The SQL database is a powerful tool unrivalled for storing and querying relational data.
-
-**BUT**, I believe most dapps can live without a traditional SQL database in favor of something more light weight and decentralized.
-
-Here are some problems with setting up a DB for your dapp
-
-1. There are already many great services which index blockchain data (why reinvent the wheel?)
-2. DBs are expensive to host
-3. Migrations are often a pain
-4. They tend to be centralized / treasure troves for attackers
-5. They usually don't give users provenance over their data
-6. Encryption / key management is a pain
-
-Many web3 developers choose to store their data as JSON directly on IPFS rather than a traditional DB, but IPFS upload times can be slow and gateway timeouts are brutal.
-
-If a traditional DB seems overkill for your use case and interacting directly with IPFS seems a bit too slow, zfast might be for you.
-
-It gives you the speed of in memory-cache (Redis) but the decentralization of a global network (Filecoin + IPFS), with some other goodies like encryption.
-
 # E2E Encryption
 
 zfast offers easy E2E encryption for user data via [lit protocol](https://litprotocol.com). In order to use encryption, you will need to install the `lit` javascript SDK.
