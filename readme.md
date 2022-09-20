@@ -1,10 +1,8 @@
-<p align="center">
   <b>
     ZFast
   </b>
   <br/>
   A quick, decentralized JSON store perfect for quick web3 builders. <br/> <a href="https;">Redis</a> + <a href="https://ipfs.io/" target="_blank">IPFS</a> = zfast = 😍
-</p>
 
 # Install
 
