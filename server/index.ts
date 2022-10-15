@@ -12,21 +12,21 @@ app.use(cors());
 app.use(express.json());
 const port = 3000;
 
-const ripServer = new ZFastServerClient({
+const zfastServer = new ZFastServerClient({
   redisUrl: process.env.REDIS_URL || "",
   ipfsApiKey: process.env.IPFS_KEY || "",
 });
 
 app.post("/set/:key", async (req, res) => {
   const start = Date.now();
-  const wrappedData = await ripServer.set(req.params.key, req.body);
+  const wrappedData = await zfastServer.set(req.params.key, req.body);
 
   res.send({ duration: Date.now() - start, ...wrappedData });
 });
 
 app.get("/get/:key", async (req, res) => {
   const start = Date.now();
-  const wrappedData = await ripServer.get(req.params.key);
+  const wrappedData = await zfastServer.get(req.params.key);
 
   res.send({ duration: Date.now() - start, ...wrappedData });
 });
@@ -35,8 +35,13 @@ app.get("/get/:key", async (req, res) => {
 // only an "owner" address should be able
 // to purge the cache for now
 app.post("/purge/:key", async (req, res) => {
-  await ripServer.purge(req.params.key);
+  await zfastServer.purge(req.params.key);
   await res.send({ status: "failed purge not yet supported" });
+});
+
+app.post("/update/:oldKey/:newKey", async (req, res) => {
+  await zfastServer.replace(req.params.oldKey, req.params.newKey);
+  await res.send({ status: "Updated key" });
 });
 
 /**
@@ -63,7 +68,7 @@ app.post("/ipfs/set", async (req, res) => {
 
 app.get("/ipfs/get/:key", async (req, res) => {
   // read CID from ZFast
-  const response = await ripServer.get(req.params.key);
+  const response = await zfastServer.get(req.params.key);
   if (!response) {
     throw new Error("No value stored with this key");
   }
